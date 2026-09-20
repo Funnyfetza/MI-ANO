@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,265 +8,509 @@
 <title>MI-ANO | 6 SOULS • 1 SECRET</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
 
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: #eaf9ff;
-        color: #16465a;
-        line-height: 1.6;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    header {
-        min-height: 70vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 50px 20px;
-        background: linear-gradient(
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eaf9ff;
+    color: #16465a;
+    line-height: 1.6;
+}
+
+/* =========================
+   HERO
+========================= */
+
+header {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(
             135deg,
             #55c9f5,
             #8de4ff,
             #d9f8ff
         );
-    }
+}
 
-    header h1 {
-        font-size: clamp(3rem, 12vw, 7rem);
-        color: white;
-        letter-spacing: 5px;
-        text-shadow: 0 5px 15px rgba(20, 100, 130, 0.2);
-    }
+header h1 {
+    font-size: clamp(3rem, 12vw, 7rem);
 
-    header p {
-        margin-top: 12px;
-        font-size: 1.1rem;
-        color: #ffffff;
-        letter-spacing: 4px;
-        font-weight: bold;
-    }
+    color: white;
 
-    .intro {
-        max-width: 900px;
-        margin: auto;
-        padding: 70px 20px 30px;
-        text-align: center;
-    }
+    letter-spacing: 5px;
 
-    .intro h2,
-    .characters-title,
-    .episodes-title {
-        font-size: 2.3rem;
-        color: #159bd0;
-        margin-bottom: 18px;
-    }
+    text-shadow:
+        0 5px 15px rgba(20, 100, 130, 0.2);
+}
 
-    .intro p {
-        font-size: 1.05rem;
-        color: #397083;
-    }
+header p {
+    margin-top: 12px;
 
-    .characters {
-        max-width: 1100px;
-        margin: auto;
-        padding: 40px 20px 80px;
-    }
+    font-size: 1.1rem;
 
-    .characters-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 25px;
-    }
+    color: white;
 
-    .character {
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 25px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(50, 160, 200, 0.13);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
+    letter-spacing: 4px;
 
-    .character:hover {
-        transform: translateY(-7px);
-        box-shadow: 0 15px 35px rgba(50, 160, 200, 0.22);
-    }
+    font-weight: bold;
+}
 
-    .character img {
-        width: 100%;
-        height: 300px;
-        object-fit: contain;
-        background: linear-gradient(
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.intro {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 70px 20px 40px;
+
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2.3rem;
+
+    color: #159bd0;
+
+    margin-bottom: 18px;
+}
+
+.intro p {
+    font-size: 1.05rem;
+
+    color: #397083;
+}
+
+
+/* =========================
+   CHARACTERS
+========================= */
+
+.characters {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 40px 20px 80px;
+}
+
+.characters-title {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.characters-title h2 {
+    font-size: 2.3rem;
+
+    color: #159bd0;
+}
+
+.characters-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(240px, 1fr)
+        );
+
+    gap: 25px;
+}
+
+
+/* CHARACTER CARD */
+
+.character {
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.95
+    );
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            50,
+            160,
+            200,
+            0.13
+        );
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.character:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(
+            50,
+            160,
+            200,
+            0.22
+        );
+}
+
+
+/* CHARACTER IMAGE */
+
+.character img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: contain;
+
+    background:
+        linear-gradient(
             180deg,
             #d9f8ff,
             #f7fdff
         );
-        display: block;
+
+    display: block;
+}
+
+
+/* CHARACTER INFORMATION */
+
+.character-info {
+
+    padding: 22px;
+
+    text-align: center;
+}
+
+.character-info h3 {
+
+    color: #119bd1;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 5px;
+}
+
+.personality {
+
+    color: #638b99;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 10px;
+}
+
+.description {
+
+    font-size: 0.95rem;
+
+    color: #3e6673;
+
+    margin-bottom: 15px;
+}
+
+
+/* OWNER */
+
+.owner {
+
+    display: inline-block;
+
+    background: #d9f8ff;
+
+    color: #128fbe;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   EPISODES
+========================= */
+
+.episodes {
+
+    padding: 70px 20px 90px;
+
+    background: #dff7ff;
+
+    text-align: center;
+}
+
+.episodes-title h2 {
+
+    font-size: 2.3rem;
+
+    color: #159bd0;
+}
+
+
+/* EPISODE CARD */
+
+.episode-card {
+
+    max-width: 750px;
+
+    margin: 30px auto 0;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            40,
+            140,
+            180,
+            0.15
+        );
+}
+
+
+/* EPISODE THUMBNAIL */
+
+.episode-card img {
+
+    width: 100%;
+
+    max-height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    display: block;
+}
+
+
+/* EPISODE TEXT */
+
+.episode-card h3 {
+
+    margin-top: 20px;
+
+    color: #159bd0;
+
+    font-size: 1.5rem;
+}
+
+.episode-card p {
+
+    margin-top: 8px;
+
+    color: #557985;
+}
+
+
+/* WATCH BUTTON */
+
+.episode-button {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 11px 22px;
+
+    border-radius: 25px;
+
+    background: #45c5ef;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.episode-button:hover {
+
+    background: #159bd0;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background: #55c9f5;
+
+    color: white;
+}
+
+footer strong {
+
+    letter-spacing: 2px;
+}
+
+.creator-credit {
+
+    margin-top: 10px;
+
+    font-size: 0.95rem;
+
+    opacity: 0.95;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        min-height: 60vh;
     }
 
-    .character-info {
-        padding: 22px;
-        text-align: center;
+    header h1 {
+        font-size: 3.5rem;
     }
 
-    .character-info h3 {
-        color: #119bd1;
-        font-size: 1.5rem;
-        margin-bottom: 5px;
-    }
-
-    .personality {
-        color: #638b99;
+    header p {
         font-size: 0.9rem;
-        margin-bottom: 10px;
-    }
 
-    .description {
-        font-size: 0.95rem;
-        color: #3e6673;
-        margin-bottom: 15px;
-    }
-
-    .owner {
-        display: inline-block;
-        background: #d9f8ff;
-        color: #128fbe;
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: bold;
-    }
-
-    .episodes {
-        padding: 70px 20px 90px;
-        background: #dff7ff;
-        text-align: center;
-    }
-
-    .episode-card {
-        max-width: 750px;
-        margin: 30px auto 0;
-        background: white;
-        padding: 20px;
-        border-radius: 25px;
-        box-shadow: 0 10px 30px rgba(40, 140, 180, 0.15);
-    }
-
-    .episode-card img {
-        width: 100%;
-        max-height: 500px;
-        object-fit: cover;
-        border-radius: 18px;
-        display: block;
-    }
-
-    .episode-card h3 {
-        margin-top: 20px;
-        color: #159bd0;
-        font-size: 1.5rem;
-    }
-
-    .episode-card p {
-        margin-top: 8px;
-        color: #557985;
-    }
-
-    .episode-button {
-        display: inline-block;
-        margin-top: 18px;
-        padding: 11px 22px;
-        border-radius: 25px;
-        background: #45c5ef;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .episode-button:hover {
-        background: #159bd0;
-    }
-
-    footer {
-        text-align: center;
-        padding: 30px 20px;
-        background: #55c9f5;
-        color: white;
-    }
-
-    footer strong {
         letter-spacing: 2px;
     }
 
-    @media (max-width: 600px) {
-
-        header {
-            min-height: 60vh;
-        }
-
-        header h1 {
-            font-size: 3.5rem;
-        }
-
-        .character img {
-            height: 280px;
-        }
-
-        .intro h2,
-        .characters-title,
-        .episodes-title {
-            font-size: 2rem;
-        }
+    .character img {
+        height: 280px;
     }
+
+    .intro h2,
+    .characters-title h2,
+    .episodes-title h2 {
+        font-size: 2rem;
+    }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
+
 <header>
+
     <div>
+
         <h1>MI-ANO</h1>
-        <p>6 SOULS • 1 SECRET</p>
+
+        <p>
+            6 SOULS • 1 SECRET
+        </p>
+
     </div>
+
 </header>
 
 
-<!-- SERIES INTRODUCTION -->
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
 <section class="intro">
 
-    <h2>Welcome to MI-ANO</h2>
+    <h2>
+        Welcome to MI-ANO
+    </h2>
 
     <p>
-        MI-ANO follows six friends as they go through school,
-        friendship, unexpected arrivals, strange moments,
+        MI-ANO follows six cousins as they
+        go through school, family moments,
+        unexpected arrivals, strange situations,
         and secrets that slowly begin to surface.
     </p>
 
     <br>
 
     <p>
-        What starts as an ordinary day may not stay ordinary for long.
+        What starts as an ordinary day
+        may not stay ordinary for long.
         ☀️📚⭐
     </p>
 
 </section>
 
 
-<!-- CHARACTERS -->
+
+<!-- =========================
+     CHARACTERS
+========================= -->
+
 <section class="characters">
 
     <div class="characters-title">
-        <h2>Meet the Characters</h2>
+
+        <h2>
+            Meet the Six Cousins
+        </h2>
+
     </div>
+
 
     <div class="characters-grid">
 
 
         <!-- FYNZO -->
+
         <div class="character">
 
             <img
@@ -275,15 +520,18 @@
 
             <div class="character-info">
 
-                <h3>Fynzo</h3>
+                <h3>
+                    Fynzo
+                </h3>
 
                 <p class="personality">
                     Cheerful • Curious • Adventurous
                 </p>
 
                 <p class="description">
-                    The bright and adventurous member of the group.
-                    Fynzo brings energy and curiosity wherever he goes.
+                    The bright and adventurous
+                    cousin who brings energy and
+                    curiosity wherever he goes.
                 </p>
 
                 <span class="owner">
@@ -295,7 +543,9 @@
         </div>
 
 
+
         <!-- CAPILL -->
+
         <div class="character">
 
             <img
@@ -305,15 +555,18 @@
 
             <div class="character-info">
 
-                <h3>Capill</h3>
+                <h3>
+                    Capill
+                </h3>
 
                 <p class="personality">
                     Kind • Calm • Loyal
                 </p>
 
                 <p class="description">
-                    The calm and dependable friend who is always
-                    there when the others need someone.
+                    The calm and dependable cousin
+                    who is always there when the
+                    others need someone.
                 </p>
 
                 <span class="owner">
@@ -325,55 +578,29 @@
         </div>
 
 
-        <!-- HYeko -->
+
+        <!-- OWLRA -->
+
         <div class="character">
 
             <img
                 src="Photoroom_20260920_201555.png"
-                alt="Hyeko"
-            >
-
-            <div class="character-info">
-
-                <h3>Hyeko</h3>
-
-                <p class="personality">
-                    Energetic • Funny • Chaotic
-                </p>
-
-                <p class="description">
-                    The chaotic and hilarious friend who can turn
-                    an ordinary moment into complete madness.
-                </p>
-
-                <span class="owner">
-                    Character owned by Gem
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- OWLRA -->
-        <div class="character">
-
-            <img
-                src="Photoroom_20260920_201602.png"
                 alt="Owlra"
             >
 
             <div class="character-info">
 
-                <h3>Owlra</h3>
+                <h3>
+                    Owlra
+                </h3>
 
                 <p class="personality">
                     Observant • Smart • Quiet
                 </p>
 
                 <p class="description">
-                    The observant one who notices things that
-                    everyone else might miss.
+                    The observant cousin who notices
+                    things that everyone else might miss.
                 </p>
 
                 <span class="owner">
@@ -385,7 +612,44 @@
         </div>
 
 
+
+        <!-- HYeko -->
+
+        <div class="character">
+
+            <img
+                src="Photoroom_20260920_201602.png"
+                alt="Hyeko"
+            >
+
+            <div class="character-info">
+
+                <h3>
+                    Hyeko
+                </h3>
+
+                <p class="personality">
+                    Energetic • Funny • Chaotic
+                </p>
+
+                <p class="description">
+                    The chaotic and hilarious cousin
+                    who can turn an ordinary moment
+                    into complete madness.
+                </p>
+
+                <span class="owner">
+                    Character owned by Gem
+                </span>
+
+            </div>
+
+        </div>
+
+
+
         <!-- SELMO -->
+
         <div class="character">
 
             <img
@@ -395,15 +659,18 @@
 
             <div class="character-info">
 
-                <h3>Selmo</h3>
+                <h3>
+                    Selmo
+                </h3>
 
                 <p class="personality">
                     Calm • Strong • Protective
                 </p>
 
                 <p class="description">
-                    A strong and protective friend who helps keep
-                    the group together when things get difficult.
+                    A strong and protective cousin
+                    who helps keep the family together
+                    when things get difficult.
                 </p>
 
                 <span class="owner">
@@ -415,7 +682,9 @@
         </div>
 
 
+
         <!-- LOVYN -->
+
         <div class="character">
 
             <img
@@ -425,15 +694,18 @@
 
             <div class="character-info">
 
-                <h3>Lovyn</h3>
+                <h3>
+                    Lovyn
+                </h3>
 
                 <p class="personality">
                     Mysterious • Gentle • Clever
                 </p>
 
                 <p class="description">
-                    A mysterious and clever friend whose unexpected
-                    arrival may change everything.
+                    A mysterious and clever cousin
+                    whose unexpected arrival may
+                    change everything.
                 </p>
 
                 <span class="owner">
@@ -450,15 +722,24 @@
 </section>
 
 
-<!-- EPISODES -->
+
+<!-- =========================
+     EPISODES
+========================= -->
+
 <section class="episodes">
 
     <div class="episodes-title">
-        <h2>Episodes</h2>
+
+        <h2>
+            Episodes
+        </h2>
+
     </div>
 
 
     <!-- EPISODE 1 -->
+
     <div class="episode-card">
 
         <img
@@ -466,19 +747,31 @@
             alt="MI-ANO Episode 1: The Usual thumbnail"
         >
 
-        <h3>Episode 1 — The Usual</h3>
+
+        <h3>
+            Episode 1 — The Usual
+        </h3>
+
 
         <p>
             Just another normal day at school...
-            Same friends. Same routine. Same usual chaos.
+            Same cousins. Same routine.
+            Same usual chaos.
         </p>
+
 
         <p>
-            Everything was going exactly as expected...
-            <strong>until Lovyn arrived.</strong> 👀🦌
+            Everything was going exactly
+            as expected...
+            <strong>
+                until Lovyn arrived.
+            </strong>
+            👀🦌
         </p>
 
-        <!-- PUT YOUR YOUTUBE LINK HERE LATER -->
+
+        <!-- ADD YOUTUBE LINK HERE LATER -->
+
         <a
             class="episode-button"
             href="#"
@@ -491,7 +784,11 @@
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     <p>
@@ -502,11 +799,20 @@
         6 SOULS • 1 SECRET
     </p>
 
+    <p class="creator-credit">
+        A world created by
+        <strong>
+            Fitz Oniot
+        </strong>
+    </p>
+
     <p>
         © 2026 MI-ANO
     </p>
 
 </footer>
 
+
 </body>
+
 </html>
